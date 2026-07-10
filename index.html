@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Story template</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-rendering: optimizeLegibility;
+        }
+
+        .content {
+            max-width: 640px;
+            margin: auto;
+        }
+
+        .header {
+            padding: 0;
+            font-size: 1rem;
+        }
+
+        a {
+            color: #f05349;
+        }
+
+        .footer {
+            background: #f4f4f4;
+            text-align: center;
+            font-size: 0.8em;
+            margin-top: 4em;
+            padding: 4em 0;
+        }
+
+        figure {
+            margin: 0;
+            padding-bottom: 1.2em;
+        }
+
+        figcaption {
+            font-size: 0.8em;
+            text-align: left;
+            margin-top: 0.2em;
+            margin-left: 0.5em;
+            margin-bottom: 0em;
+            color: #666;
+        }
+
+        h1 {
+            font-family: 'Lora', Georgia, serif;
+            font-weight: bold;
+            font-size: 3em;
+            line-height: 1.1;
+        }
+
+        .subhead {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 1rem;
+        }
+
+        .byline {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        iframe,
+        img,
+        video {
+            max-width: 100%;
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 0;
+            padding-bottom: 1.2em;
+        }
+
+        ul {
+            margin: 0;
+            padding-bottom: 1em;
+            line-height: 1.6;
+        }
+
+        iframe {
+            padding-bottom: 1.2em;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background: #fffbaf;
+            font-size: 0.85em;
+        }
+
+        .full-width figure {
+            text-align: center;
+        }
+
+        /* margin on mobile */
+        @media (max-width: 640px) {
+            body {
+                font-size: 18px;
+            }
+
+            .content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
+    </style>
+
+    <style>
+    .with-image-bg {
+        background-position: center ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: 0.2em;
+
+            width: 100%;
+            aspect-ratio: 4/3;
+            position: relative;
+
+            /* Center everything inside */
+            min-height: 50svh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* White text with a shadow */
+            color: white;
+            text-shadow: 0px 0px 30px black,
+                0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .with-image-bg {
+            background-image: url('POPS_photo_1.jpeg');
+        }
+
+        .title-box {
+            position:absolute;
+            bottom:20px;
+            left:5%;
+        }
+    
+        .full-width {
+            width:100vw;
+            margin-left:calc(50% - 50vw);
+        }
+
+        .full-width img{
+            width:100%;
+            max-height: 850px;
+            object-fit: cover;
+            display:block;
+        }
+        .full-width iframe{
+            width:100%;
+            height:600px;
+            border:none;
+        }
+
+        .subhead {
+            font-size: 1.5rem;
+        }
+
+        .modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: palevioletred;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 2rem;
+        max-width: 400px;
+        border-radius: 8px;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 14px;
+      }
+
+      .modal button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+
+    .portrait img {
+      width: 70%;
+      max-width: 500px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      
+    }
+
+    </style>
+		<script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.0.4/scrollama.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+    </style>
+</head>
+
+<body>
+    <div class="header with-image-bg">
+        <div class="title-box">
+        </div>
+    </div>
+    <figcaption>Manhattan, New York, is lined with many skyscrapers. Photo by Kunihiro Iwasaki
+      </figcaption>
+    <div class="content">
+        <div class="header">
+        <h1>70% of New York Buildings Violate Public Space Regulations</h1></div>
+        <p class="subhead">Owners Turn a Blind Eye to Maintenance After Receiving Floor Area Ratio Bonuses</p>
+        <div class="byline">
+            <p>By Kunihiro Iwasaki</p>
+        </div>
+        <p>On the afternoon of July 3, the day before the 250th Independence Day, at 575 Fifth Avenue in Manhattan, New York. 
+          As the temperature rose to nearly 100 degrees Fahrenheit, a dozen or so people were cooling off in the building’s atrium.
+           As reporter observed the scene for about two hours, members of the public came and went, sitting at tables to have lunch or read the newspaper.</p>
+        <p>This space is known as a Privately Owned Public Space (POPS). It was developed by the building’s owner and is freely accessible to anyone.
+           However, it is not widely known that these POPS were created in exchange for permission to build larger buildings.</p>
+     <div class="figure">
+        <figure>
+        <img src="POPS_photo_5.jpeg">
+        <div class="figcaption">
+        <figcaption>Many people spend their free time in public spaces. Photo by Kunihiro Iwasaki</figcaption>
+        </div>
+        </figure>
+        </div>
+      <p>In 1961, the City of New York began requiring the creation of POPS as a condition for relaxing floor-area ratio restrictions,
+           with the aim of increasing public space in densely populated areas such as downtown Manhattan. Although there are limits,
+            developers can receive a floor-area bonus of up to 10 square feet for every 1 square foot of public space.</p>
+      <p>Today, 392 buildings in New York City own approximately 600 POPS—including plazas and arcades—with a total area of 3.8 million square feet (equivalent to nine Bryant Parks).
+         Building owners are obligated to maintain and manage these POPS in permanently.
+      </p>
+    <div class="full-width">
+        <figure>
+        <img src="POPS_map_1.png">
+        </figure>
+        </div>
+      <p>The current issues revolve around the commercial use of POPS and the lack of proper management.
+         An analysis of New York City’s open data on POPS and complaints regarding POPS filed with the city’s Department of Buildings (DOB) revealed that 280 of the 392 buildings with POPS—71 percent—had been cited for violations by the city since 2000.</p>
+      <p>One such example is 1251 Avenue of the Americas in midtown Manhattan. On June 23 of this year, the city issued a violation notice alleging
+         that a Japanese restaurant had expanded its business area by placing tables, chairs, and umbrellas on its outdoor POPS without permission.
+          However, when a reporter visited the site on July 8, the tables and chairs were still in place, and the violation had not been rectified.</p>
+    <div class="full-width img">
+        <figure>
+         <img src="POPS_photo_3.JPG">
+         <figcaption>Tables and chairs from a Japanese restaurant had been set up in a public space. Photo by Kunihiro Iwasaki</figcaption>
+          </figure>
+   </div>
+    <p>What is the actual state of these violations? I analyzed 460 cases from 2000 onward for which the details of the violations could be confirmed using New York City’s open data.
+         I used generative AI (GPT-5.5) for the analysis and classified the violations into five categories: access restrictions, lack of amenities, commercial use, lack of maintenance, and inadequate signage. The reporter also verified the results.</p>
+    <div class="flourish-embed flourish-chart" data-src="visualisation/29644467?1501741"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29644467/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+    <p>As a result, there were 73 cases of commercial use, such as the restaurant mentioned above.
+       There were also 97 cases of access restrictions, with violations contrary to the purpose of public spaces accounting for just under 40 percent of the total.
+        Many violations were also noted, including the failure to install promised equipment—such as water dispensers and trash cans—and the lack of signs indicating that the area was a public space.</p>
+    <p>The City of New York is not sitting idly by. In 2017, it enacted an ordinance to strengthen oversight of POPS, and the city has been cracking down on violations since that time.
+       There have been cases where a single building was reported to the city for violations seven times, and the reality is that these violations persist. </p>
+    <div class="flourish-embed flourish-chart" data-src="visualisation/29621487?1501741"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/29621487/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+    <p>The underlying reason is the leniency of the penalties for violations. Fines are set at $4,000 or more for the first offense and $10,000 or more for subsequent offenses.
+       According to DOB data, there have been cases where a $10,000 fine was imposed. However, these are the exception rather than the rule; in most cases, no fine was even imposed.
+        Compared to the profits building owners gain from floor area ratio (FAR) bonuses, these fines are minuscule, and the current system serves as no deterrent. </p>
+    <div class="figure">
+       <figure>
+       <img src="POPS_chart_1.png">
+       </figure>
+    </div>
+    <p>POPS also exist in Japan. Under Tokyo’s system, creating public squares or parks results in floor area ratio (FAR) relief, similar to New York City.
+       According to Tokyo Metropolitan Government data, 793 buildings have implemented POPS.</p>
+    <div>
+      <figure>
+       <img src="tokyo_POPS_map.png">
+      </figure>
+    </div>
+    <p>A reporter has visited several POPS sites in Tokyo. The plaza at Nihon University’s College of Science and Technology in Chiyoda Ward, central Tokyo, features simple support benches where people can sit.
+       However, there are no tables, and the ground slopes, making it seem like an environment unsuitable for prolonged stays. In another location in Chiyoda Ward, a space created by widening an alley by one to two meters is also designated as a POPS.</p>
+    <div>  
+      <figure>
+        <img src="tokyo_POPS_photo_3.jpg">
+          <figcaption>Public spaces in Tokyo have only simple benches. October 2023, Photo by Kunihiro Iwasaki</figcaption>
+      </figure>
+      <figure class="portrait">
+        <img src="tokyo_POPS_photo_1.jpg">
+          <figcaption>The right half of the alley is also public space. October 2023, Photo by Kunihiro Iwasaki</figcaption>
+      </figure>
+    </div>
+    <p>An even bigger problem is the disclosure of information regarding POPS is insufficient. The names, addresses, and areas of the POPS at 793 buildings can be viewed on the Tokyo Metropolitan Government’s website.
+       However, it is not possible to learn not only the details of complaints submitted by citizens or the status of violations, but also the types of POPS or even the equipment required to be installed; as things stand, it is impossible to evaluate the policy.</p>
+    <p>POPS are not just for building owners; they are a public asset. To ensure these spaces continue to enrich the cityscape, it is essential to establish a foundation for open discussion.</p>
+</div>
+     <div class="footer">
+        <div class="content">
+            <p>GitHub repository is <a href="https://github.com/Kunihiro-Iwasaki/Project1.git">here</a>.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
