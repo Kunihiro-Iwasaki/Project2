@@ -12,4 +12,5 @@
 ###### "Building Information System" https://a810-bisweb.nyc.gov/bisweb/
 ## A section about what new skills, approaches, etc
 #### When creating maps and charts, there were instances where QGIS and Flourish alone could not produce a clean presentation, so I utilized Illustrator.Since retrieving detailed information on POPS violations required entering complaint numbers one by one on the BIS website, I automated the process and extracted the data via web scraping. I used AI for text analysis to improve operational efficiency.
-## A section about things you tried to do or wanted to do but did not have the skills/time 
+## A section about things tried to do or wanted to do
+#### Interviews with New York City authorities and owners of buildings with violations. Enhancing visual presentation through the use of scroll-based storytelling.
