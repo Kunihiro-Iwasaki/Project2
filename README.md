@@ -6,8 +6,7 @@
 ## Short description of findings
 #### An analysis of multiple open data sets from New York City revealed that 70 percent of the 392 buildings had been cited for violations by city authorities since 2000. Furthermore, an analysis of the nature of these violations showed that in just under 40 percent of cases, building owners had deviated from the program’s intent by using the public spaces for commercial purposes or closing them off to the public.
 ## Summary of the data collection process
-#### "NYC Open Data Privately Owned Public Spaces (POPS)"
-
+#### First, I retrieved data on all 392 POPS locations in New York City from the "NYC Open Data Privately Owned Public Spaces (POPS)". Next, I obtained complaint data submitted to the DOB and extracted 3,711 complaints related to POPS from the "DOB Complaints". I merged this data with the POPS data using building IDs and analyzed the violation status for each building. Furthermore, by entering a complaint number on the "Building Information System", one can view detailed information about the violation. I automatically entered 460 complaint numbers—each containing violation details—one by one and scraped the violation information. I then used AI to classify these 460 cases into five categories, thereby clarifying the actual nature of the violations.
 ###### "NYC Open Data Privately Owned Public Spaces (POPS)" https://data.cityofnewyork.us/City-Government/Privately-Owned-Public-Spaces-POPS-/rvih-nhyn/about_data
 ###### "DOB Complaints" https://data.cityofnewyork.us/Housing-Development/DOB-Complaints/vztk-gaf7/about_data
 ###### "Building Information System" https://a810-bisweb.nyc.gov/bisweb/
