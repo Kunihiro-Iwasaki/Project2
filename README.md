@@ -1,6 +1,7 @@
 # Project2
 ## Title
 ### 70% of New York Buildings Violate Public Space Regulations
+#### By Kunihiro Iwasaki
 ## Short description of what aimed to accomplish
 #### When walking around Manhattan, you’ll come across public spaces marked with “OPEN TO PUBLIC” signs. In fact, these public spaces were developed by building owners in exchange for permission to construct larger buildings. A total of 392 buildings have developed such spaces, resulting in approximately 600 locations throughout New York City. Are building owners properly operating and managing these public spaces after receiving their development incentives? I sought to uncover the reality through data analysis and on-site investigations.
 ## Short description of findings
